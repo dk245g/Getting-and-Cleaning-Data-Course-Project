@@ -1,22 +1,22 @@
 # Data Generation
 The steps in the R script **run_analysis.R** are:
-  1. Merges the training and the test sets to create one data set.
-    1.1. Read datasets from 'test/X_test.txt' and 'train/X_train.txt'
-    1.2. Merge the datasets	to one
-  2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-    2.1. Read feature names from 'feature.txt'	     
-    2.2. Find the ids of mean and std of the names
-    2.3. Extract the measurements on the mean and std using the ids as a data.frame 'df'
-  3. Uses descriptive activity names to name the activities in the data set
-    3.1. Read activity name from 'activity_labels.txt'
-    3.2. Read activity ids and merge from 'test/y_test.txt' and 'train/y_train.txt'
-    3.3. Assign activity names to the dataset as new column of the 'df'
-  4. Appropriately labels the data set with descriptive variable names. 
-    4.1. Assign descriptive variable names of the feature names to colnames of the 'df'
-    4.2. Read subject data from 'test/subject_test.txt' and 'train/subject_train.txt' and merge
-	4.3. Add column of subject to the 'df'
-  5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-    5.1. Average of each variable for each activity and each subject and save as the tide dataset 'average_for_activity_subject.txt'
+  1. Merges the training and the test sets to create one data set.  
+    1.1. Read datasets from 'test/X_test.txt' and 'train/X_train.txt'  
+    1.2. Merge the datasets	to one  
+  2. Extracts only the measurements on the mean and standard deviation for each measurement.  
+    2.1. Read feature names from 'feature.txt'  
+    2.2. Find the ids of mean and std of the names  
+    2.3. Extract the measurements on the mean and std using the ids as a data.frame 'df'  
+  3. Uses descriptive activity names to name the activities in the data set  
+    3.1. Read activity name from 'activity_labels.txt'  
+    3.2. Read activity ids and merge from 'test/y_test.txt' and 'train/y_train.txt'  
+    3.3. Assign activity names to the dataset as new column of the 'df'  
+  4. Appropriately labels the data set with descriptive variable names.  
+    4.1. Assign descriptive variable names of the feature names to colnames of the 'df'  
+    4.2. Read subject data from 'test/subject_test.txt' and 'train/subject_train.txt' and merge  
+	4.3. Add column of subject to the 'df'  
+  5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.  
+    5.1. Average of each variable for each activity and each subject and save as the tide dataset 'average_for_activity_subject.txt'  
 
 For the information of the variables in the tide dataset, please see the following content extracted from 'features_info.txt' of the UCI HAR Dataset.
 
@@ -32,28 +32,27 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-These signals were used to estimate variables of the feature vector for each pattern:
+These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+tBodyAcc-XYZ  
+tGravityAcc-XYZ  
+tBodyAccJerk-XYZ  
+tBodyGyro-XYZ  
+tBodyGyroJerk-XYZ  
+tBodyAccMag  
+tGravityAccMag  
+tBodyAccJerkMag  
+tBodyGyroMag  
+tBodyGyroJerkMag  
+fBodyAcc-XYZ  
+fBodyAccJerk-XYZ  
+fBodyGyro-XYZ  
+fBodyAccMag  
+fBodyAccJerkMag  
+fBodyGyroMag  
+fBodyGyroJerkMag  
 
-The set of variables that were estimated from these signals are: 
-mean(): Mean value
-std(): Standard deviation
-
+The set of variables that were estimated from these signals are:   
+mean(): Mean value  
+std(): Standard deviation  
